@@ -120,8 +120,12 @@ const PostDetails = () => {
 
     const onEditPost = async (item)=>{
         router.back()
-        router.push({pathname: 'newPost', params: {...item}})
-        
+        router.push({pathname: 'newCPost', params: {...item}})
+    }
+
+    const onJoinPost = async (item)=>{
+        router.back()
+        router.push({pathname: 'joinPost', params: {...item}})
     }
 
     if(startLoading){
@@ -150,10 +154,12 @@ const PostDetails = () => {
         currentUser={user}
         router={router}
         hasShadow={false}
+        showJoin={true}
         showMoreIcon={false}
         showDelete={true}
         onDelete={onDeletePost}
         onEdit={onEditPost}
+        onJoin={onJoinPost}
         />
 
         {/* comment input */}

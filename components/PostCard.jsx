@@ -12,6 +12,7 @@ import { downloadFile, getSupabaseFileUrl } from '../services/imageService'
 import { Video } from 'expo-av'
 import Loading from '../components/Loading'
 import { createPostLike, removePostLike } from '../services/postService'
+import Button from '../components/Button'
 
 
 const textStyle ={
@@ -36,8 +37,10 @@ const PostCard = ({
     hasShadow = true,
     showMoreIcon = true,
     showDelete = false,
+    showJoin = false,
     onDelete =()=>{},
-    onEdit =()=>{}
+    onEdit =()=>{},
+    onJoin =()=>{}
 
 }) => {
     const shadowStyles = {
@@ -126,7 +129,7 @@ const PostCard = ({
         />
         <View style={{gap:2}}>
         <Text style={styles.username}>{item?.user.name}</Text>
-        <Text style={styles.postTime}>{createdAt}</Text>
+        <Text style={styles.postTime}>{createdAt} • {item?.difficulty}</Text> 
         </View>
       </View>
 
@@ -146,6 +149,16 @@ const PostCard = ({
                 </TouchableOpacity>
                 <TouchableOpacity onPress={handlePostDelete}>
                     <Icon name="delete" size={hp(2.5)} color={theme.colors.rose} />
+                </TouchableOpacity>
+            </View>
+        )
+      }
+
+      {
+        showJoin && currentUser.id !== item?.userId && (
+            <View style={styles.actions}>
+                <TouchableOpacity onPress={()=> onJoin(item)}>
+                    <Icon name="plus" size={hp(2.5)} color={theme.colors.text} />
                 </TouchableOpacity>
             </View>
         )

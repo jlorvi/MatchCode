@@ -41,7 +41,7 @@ const RichTextEditor = ({
           ref={editorRef}
           containerStyle={styles.rich}
           editorStyle={styles.contentStyle}
-          placeholder={"Pose a challenge"}
+          placeholder={"Post a challenge"}
           onChange={onChange}
         />
     </View>

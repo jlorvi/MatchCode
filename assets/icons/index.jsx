@@ -22,8 +22,10 @@ import Delete from './Delete';
 import Logout from './logout';
 import Image from './Image';
 import Video from './Video';
+import File from './File';
 
 const icons = {
+    file: File,
     home: Home,
     mail: Mail,
     lock: Lock,

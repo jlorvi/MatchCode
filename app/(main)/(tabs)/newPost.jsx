@@ -190,7 +190,7 @@ const NewPost = () => {
                           <Icon name="image" size={30} color={theme.colors.dark}/>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={()=> onPick(false)}>
-                        <Icon name="video" size={33} color={theme.colors.dark}/>
+                        <Icon name="file" size={30} color={theme.colors.dark}/>
                       </TouchableOpacity>
                     </View>
                 </View>
@@ -198,7 +198,7 @@ const NewPost = () => {
 
               <Button
               buttonStyle={{height: hp(6.2)}}
-              title={post && post.id? "Update": "Post"}
+              title={post && post.id? "Update": "Create a challenge"}
               loading={loading}
               hasShadow={false}
               onPress={onSubmit}
