@@ -20,7 +20,11 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.lorvi.CodeBattleApp"
+      "package": "com.lorvi.CodeBattleApp",
+      "permissions": ["INTERNET, ACCESS_NETWORK_STATE"],
+      "config": {
+        "usesCleartextTraffic": false
+      }
     },
     "web": {
       "bundler": "metro",
@@ -34,6 +38,8 @@
       "typedRoutes": true
     },
     "extra": {
+      "supabaseUrl": "https://jucfykccddyivoduwgfy.supabase.co",
+      "supabaseKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp1Y2Z5a2NjZGR5aXZvZHV3Z2Z5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg0OTg3OTEsImV4cCI6MjA0NDA3NDc5MX0.2N-86gmk3L3o8OofgWoqkZOXfXXkzUStCgjHYlr3Rqw",
       "eas": {
         "projectId": "ffcb394f-3cdb-4ce1-a1d9-4a260b0c07b9"
       }
