@@ -71,8 +71,6 @@ const Home = () => {
         .on('postgres_changes', {event:'INSERT', schema: 'public', table: 'notifications', filter: `receiverId=eq.${user.id}`}, handleNewNotification)
         .subscribe()
 
-        
-
         return()=>{
             supabase.removeChannel(postChannel)
             supabase.removeChannel(notificationChannel)
